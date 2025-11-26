@@ -741,12 +741,18 @@ ul {
     padding: 30px;
 }
 
-.doan-van {
+.doan-van,
+.doan-van2 {
     text-align: justify;
     text-indent: 30px;
     line-height: 1.5;
     font-size: 2.5rem;
     font-family: 'Ephesis';
+}
+
+.doan-van2 {
+    font-family: 'Roboto Flex';
+    font-size: 1.5rem;
 }
 
 .title-to-chuc {
