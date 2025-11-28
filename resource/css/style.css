@@ -18,6 +18,7 @@ a {
     --max-height: 100vh;
     --gradient: linear-gradient(108deg, #0894FF, #C959DD 34%, #FF2E54 68%, #FF9004);
     --font-size-title: 2.3rem;
+    --color-footer: #616161;
 }
 
 /* Dùng chung */
@@ -347,9 +348,17 @@ ul {
     margin: 0 10px 0;
     display: block;
     width: 322px;
-    margin: 10px;
     flex-shrink: 0;
 }
+
+.tin-tuc-box {
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px -3px;
+    display: block;
+    margin: 12px 0;
+}
+
+
 
 .featured-activities-box:hover {
     transform: translateY(-10px);
@@ -376,6 +385,10 @@ ul {
 .featured-content {
     text-align: justify;
     color: #484848;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
 }
 
 .layout-grid {
@@ -675,10 +688,12 @@ ul {
     padding: 0 10px 0;
     margin: 10px 0;
 } */
+
+
 .kbcontainer {
-    background: black;
+    background: #f2f2f2;
     padding: 20px;
-    color: white;
+    color: var(--color-footer);
     overflow: hidden;
     position: relative;
 }
@@ -688,7 +703,7 @@ ul {
 }
 
 .link-footer {
-    color: white;
+    color: var(--color-footer);
 }
 
 .partner-container-maha {
@@ -822,4 +837,125 @@ ul {
     right: -98px;
     filter: blur(75px);
     border-radius: 50%;
+}
+
+.so-do-to-chuc {
+
+    margin-top: 100px;
+    display: flex;
+}
+
+
+.title-standard {
+    font-size: 2rem;
+    position: relative;
+
+}
+
+
+.title-standard::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(45deg, #0f00ff, #00dcff);
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+}
+
+.hinh-to-chuc {
+    margin-bottom: 30px;
+}
+
+
+.text-to-chuc {
+    margin-top: 100px;
+}
+
+.container-vh {
+    min-height: 100vh;
+    margin-top: 100px;
+}
+
+.box-news {
+    overflow: hidden;
+    box-shadow: 1px 1px 12px;
+}
+
+.box-content-news {
+    padding: 25px;
+    /* min-height: 259px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-image-header {
+    height: 31.25rem;
+    background: linear-gradient(rgb(0 0 0 / 13%), rgb(0 0 0 / 60%)), url(../images/pignews.jpg) center / cover no-repeat;
+    position: relative;
+}
+
+.news-image-header::before {
+    content: "Tin tức";
+    display: block;
+    color: white;
+    font-size: 9rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* text-shadow: 1px 2px 12px; */
+}
+
+.news-select {
+    text-overflow: ellipsis;
+    margin-top: 10px;
+    height: 2.5625rem;
+    border-radius: 8px;
+    padding: 0 1.5625rem;
+}
+
+.news-filter {
+    margin-top: 50px;
+}
+
+.refresh-news {
+    text-align: right;
+}
+
+.refresh-news:hover {
+    color: red;
+}
+
+.news-filter-theme {
+    margin-top: 37px;
+}
+
+.news-lines {
+    margin-top: 50px;
+}
+
+.fa-arrow-rotate-right {
+    margin-right: 10px;
+}
+
+.choose-tin-tuc {
+    font-weight: 300;
+}
+
+.news-image-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-infomation {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
 }
