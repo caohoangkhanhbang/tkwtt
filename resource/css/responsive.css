@@ -32,6 +32,72 @@
         right: 3%;
     }
 
+    .padding-information {
+        padding: 50px;
+    }
+
+    .menu-text-logo {
+        display: block;
+        color: #2011fe;
+        font-family: var(--font-bold);
+        font-size: 1rem;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+
+
+}
+
+/* Mobile và tablet */
+@media (min-width: 46.25em) and (max-width: 64em),
+(max-width: 46.1875em) {
+
+
+    .infomation-container {
+        padding: 0;
+    }
+
+    .menu {
+        position: fixed;
+        width: 98%;
+        border-radius: 7px;
+        top: 3px;
+        justify-content: space-between;
+    }
+
+    .menu-home {
+        display: none;
+    }
+
+    .bars-icon {
+        display: block;
+        font-size: 40px;
+        color: white;
+    }
+
+    .menu-detail {
+        width: 100vw;
+        max-height: 50vh;
+        background: white;
+        z-index: 1;
+        position: absolute;
+        top: 70px;
+        left: -3px;
+        backdrop-filter: blur(20px);
+        border-radius: 7px;
+    }
+
+    .menu-detail-resp {
+        padding: 10px;
+        display: block;
+        color: black;
+    }
+
+    .menu-detail-resp:hover .menu-detail a.menu-detail-resp {
+        background: blue;
+    }
+
 
 }
 
@@ -108,9 +174,18 @@
         display: none;
     }
 
-    .menu {
-        display: none;
+
+
+
+
+
+
+
+
+    .search-input {
+        width: 196px;
     }
+
 
     .veterinary {
         width: 97%;
@@ -133,5 +208,45 @@
     .banner {
         height: 75vh;
     }
+
+    .follow-icon {
+        font-size: 13px;
+        color: black;
+        padding: 7px 14px;
+        background: white;
+        border-radius: 59px;
+        margin-right: 6px;
+    }
+
+    .address-ncvdn2 {
+        border-right: none;
+        border-bottom: 1px solid;
+        padding: 10px;
+    }
+
+    .footer-name-logo {
+        justify-content: center;
+    }
+
+    .container-content-bee {
+        flex-direction: column;
+    }
+
+    .information-title {
+        text-align: center;
+        font-size: 3.25rem;
+    }
+
+    .padding-information {
+        padding: 25px;
+    }
+
+    .information-button {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
 
 }

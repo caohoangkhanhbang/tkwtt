@@ -109,6 +109,9 @@ ul {
     border-radius: 100px;
 }
 
+.menu-text-logo {
+    display: none;
+}
 
 
 .menu-home {
@@ -123,29 +126,54 @@ ul {
 
 .menu-top {}
 
-/* .menu-wide {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: 10;
-} */
+.bars-icon {
+    display: none;
+}
 
 .menu {
     height: var(--header-top);
     display: flex;
     align-items: center;
-    /* width: var(--wide); */
     margin: auto;
     border-radius: 100px;
     background: linear-gradient(45deg, #e9f0f1cf, #006bff30);
-    /* background: linear-gradient(45deg, #ffffffcf, #006bff30); */
-    position: fixed;
     backdrop-filter: blur(40px);
     z-index: 10;
     top: 10px;
     padding: 0 10px;
+    /* position: relative; */
+    position: fixed;
 }
+
+.menu-detail {
+    display: none;
+}
+
+.menu-detail:hover a.menu-detail-resp {
+    background: #03A9F4;
+}
+
+.menu-detail a.menu-detail-resp {
+    animation: truotlen .3s linear;
+}
+
+@keyframes truotlen {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.active {
+    display: block;
+}
+
+
 
 .logo-left {
     margin-right: 10px;
@@ -223,19 +251,30 @@ ul {
 
 
 
-
+.footer-text-style-tt,
 .footer-text-style {
     display: block;
     padding: 5px;
     font-size: 16px;
     font-family: 'Roboto Flex';
-    font-weight: 200;
+    font-weight: 500;
+}
+
+.footer-text-style-tt {
+    color: #818181;
+    font-family: var(--font-bold);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.footer-name-logo {
+    justify-content: start;
 }
 
 .address-module {
     display: flex;
     align-items: center;
-    font-weight: 100;
+    font-weight: 500;
 }
 
 .footer {
@@ -1012,6 +1051,7 @@ ul {
     display: flex;
     align-items: center;
     position: relative;
+    padding: 10px;
 }
 
 .kbfooter-bee::before {
@@ -1049,6 +1089,7 @@ ul {
     border-radius: 30px;
     font-family: 'Cal Sans';
     border: none;
+    margin-bottom: 25px;
 }
 
 .footer-bee-botton:hover {
@@ -1083,15 +1124,18 @@ ul {
     line-height: 1.2;
 }
 
-.title-chungtoilamgi {
+/* .title-chungtoilamgi {
     margin: 30px 0;
     font-size: 4.25rem;
     font-family: var(--font-bold);
 
-}
+} */
 
-.content-chungtoilamgi {
+.content-chungtoilamgi,
+.infomation-content {
     color: rgba(93, 94, 95, 1);
+    margin: 10px 0;
+    text-align: justify;
 }
 
 .margin-top {
@@ -1103,15 +1147,18 @@ ul {
     border-bottom: 2px solid;
 }
 
-.infomation-content {
-    color: rgba(93, 94, 95, 1);
-}
 
+.information-introduce,
 .information-title {
     margin: 30px 0;
     font-size: 4.25rem;
     font-family: var(--font-bold);
 }
+
+.information-introduce {
+    font-size: 2rem;
+}
+
 
 .infomation-image {
     width: 100%;
@@ -1140,6 +1187,7 @@ ul {
     display: flex;
     align-items: center;
     margin: 25px 0;
+    padding: 10px;
 }
 
 .follow-icon {
@@ -1197,4 +1245,78 @@ ul {
 
 .title-follow-footer {
     text-align: right;
+}
+
+.content-detail-news {
+    background: #333333;
+    border-bottom: 2px solid;
+}
+
+.main-content-information {
+    background: white;
+    padding: 20px;
+}
+
+.news-information {}
+
+.color-white {
+    color: white;
+}
+
+.logo-footer {
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    width: 58px;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    padding: 0 20px;
+    padding-right: 35px;
+    font-size: 1rem;
+    font-family: var(--font-bold);
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-icon {
+    width: 30px;
+    height: 30px;
+    color: white;
+    border-radius: 100px;
+    background: linear-gradient(90deg, #1900ff, rgb(0 255 243));
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+}
+
+.search-icon:hover {
+    background: linear-gradient(90deg, #ff0000, rgb(254, 54, 127));
+
+}
+
+.information-title-english,
+.information-title-medium {
+    font-family: var(--font-bold);
+    margin: 25px 0;
+    text-align: justify;
+}
+
+.information-title-medium {
+    font-size: 3rem;
+}
+
+.information-title-english {
+    font-size: 2rem;
+    font-style: italic;
 }
