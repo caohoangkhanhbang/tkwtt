@@ -18,12 +18,15 @@ a {
     --max-height: 100vh;
     --gradient: linear-gradient(108deg, #0894FF, #C959DD 34%, #FF2E54 68%, #FF9004);
     --font-size-title: 2.3rem;
-    --color-footer: rgb(119, 119, 119);
+    --color-footer: rgb(190, 190, 190);
     --margin-header: 80px;
+    --tin-background: url('../images/TinBackground.jpg') no-repeat center / cover;
+    --gradient-standard: linear-gradient(90deg, #1900ff, rgb(0 255 243));
 }
 
 .kbhr {
     margin: 25px 0;
+
 }
 
 /* Dùng chung */
@@ -33,13 +36,16 @@ a {
     justify-content: center;
 }
 
+
+
+.noi-dung {
+    text-align: justify;
+}
+
 .remove-style-a {
     text-decoration: none;
 }
 
-.remove-style-a:visited {
-    /* color: red; */
-}
 
 @font-face {
     font-family: 'Birthstone';
@@ -261,7 +267,7 @@ ul {
 }
 
 .footer-text-style-tt {
-    color: #818181;
+    color: white;
     font-family: var(--font-bold);
     font-size: 1.5rem;
     text-align: center;
@@ -323,9 +329,8 @@ ul {
     font-size: 2.3rem;
     margin-left: 10px;
     padding: 10px;
-    background: linear-gradient(45deg, #007eff, #ff00aa);
     border-radius: 7px;
-    color: white;
+    color: black;
     border-left: 12px solid #00fbff;
     font-family: var(--font-bold);
     margin: 20px 0 20px;
@@ -387,6 +392,15 @@ ul {
     object-fit: cover;
 }
 
+/* .featured-activities-box {
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px -3px;
+    margin: 0 10px 0;
+    display: block;
+    width: 322px;
+    flex-shrink: 0;
+} */
+
 .featured-activities-box {
     border-radius: 5px;
     box-shadow: 0px 0px 8px -3px;
@@ -394,6 +408,16 @@ ul {
     display: block;
     width: 322px;
     flex-shrink: 0;
+    backdrop-filter: blur(20px);
+    border: 1px solid #ffffff5e;
+}
+
+
+.featured-activities {
+    width: 100%;
+    background: url('../images/hoat_dong_noi_bac_bkg.jpg');
+    padding: 30px 0;
+    margin: 20px 0;
 }
 
 .tin-tuc-box {
@@ -548,7 +572,7 @@ ul {
 }
 
 .news-right-item {
-    width: 95%;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 1px 1px 9px -5px;
     padding: 10px;
@@ -638,6 +662,8 @@ ul {
     align-items: center;
     justify-content: space-around;
     position: relative;
+    background: url('../images/doitacbackground.jpg');
+    background-position: center;
 }
 
 .blue-box {
@@ -699,11 +725,9 @@ ul {
 
 .text-color-standard {
     display: inline-block;
-    color: rgba(0, 42, 255, 0.671);
-    /* background: var(--gradient); */
-    /* background: linear-gradient(45deg, rgb(17, 0, 255), rgb(255, 0, 200), rgb(0, 255, 183), rgb(255, 0, 72), blue); */
-    /* background-clip: text; */
-    /* color: transparent; */
+    background: var(--gradient-standard);
+    background-clip: text;
+    color: transparent;
     font-family: var(--font-bold);
     font-size: var(--font-size-title);
     padding: 14px;
@@ -768,14 +792,14 @@ ul {
     background: url(../images/vethong.png) no-repeat center / contain;
 }
 
-.animal-pig {
+/* .animal-pig {
     position: absolute;
     width: 250px;
     height: 250px;
     top: -100px;
     right: 19%;
     background: url(../images/coptrang.png) no-repeat center / contain;
-}
+} */
 
 /* animation */
 @keyframes troi-chay {
@@ -965,6 +989,7 @@ ul {
     height: 2.5625rem;
     border-radius: 8px;
     padding: 0 1.5625rem;
+    width: 100%;
 }
 
 .news-filter {
@@ -980,7 +1005,7 @@ ul {
 }
 
 .news-filter-theme {
-    margin-top: 37px;
+    margin: 37px 0;
 }
 
 .news-lines {
@@ -1046,7 +1071,7 @@ ul {
 
 
 .kbfooter-bee {
-    background: url('../images/ong.jpg') center / cover;
+    background: var(--tin-background);
     min-height: 476px;
     display: flex;
     align-items: center;
@@ -1181,7 +1206,7 @@ ul {
 }
 
 .follow-container {
-    height: 331px;
+    height: 70vh;
     background: url('../images/follow.jpg') center/ cover;
     background-position: 10%;
     display: flex;
@@ -1211,6 +1236,10 @@ ul {
 
 .social-container {
     margin: 25px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
 }
 
 .follow-container-right {
@@ -1319,4 +1348,65 @@ ul {
 .information-title-english {
     font-size: 2rem;
     font-style: italic;
+}
+
+.block-info-container {
+    background: url('../images/xet_nghiem_td.jpg') no-repeat center /cover;
+    margin: 70px 0;
+    padding: 50px;
+    position: relative;
+}
+
+
+.block-info-container::before {
+    content: '';
+    display: block;
+    width: 55%;
+    height: 100%;
+    backdrop-filter: blur(9px);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button-standard {
+    color: white;
+    background: black;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: var(--font-bold);
+}
+
+.button-standard:hover {
+    color: white;
+    background: linear-gradient(90deg, rgb(25, 0, 255), rgb(0, 255, 243));
+}
+
+.hoat-dong-backround {
+    background: url(../images/hoatDongBackground.jpg) no-repeat center /cover;
+}
+
+.standard-container {
+    min-height: 90vh;
+}
+
+.meo-tim-kiem {
+    background: linear-gradient(90deg, rgb(0 255 243), #1900ff, #1900ff, rgb(0 255 243));
+    min-height: 30vh;
+    padding: 30px 0;
+    margin: 10px 0;
+}
+
+.meo-tim-kiem-item {
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    padding: 30px;
+    backdrop-filter: blur(20px);
+    margin: 10px;
+}
+
+.error-container {
+    margin-top: 20vh;
 }
